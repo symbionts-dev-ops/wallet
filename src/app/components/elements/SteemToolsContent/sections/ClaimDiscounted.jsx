@@ -232,7 +232,6 @@ class ClaimDiscounted extends React.Component {
     }
 
     async refresh() {
-        console.log('refreshing claim discounted info');
         let username = this.props.accountname || this.state.username;
         if (!username) return;
 
@@ -420,14 +419,6 @@ class ClaimDiscounted extends React.Component {
                 if (nextClaimAmount > Math.max(nextMaxAllowed, 1))
                     nextClaimAmount = Math.max(nextMaxAllowed, 1);
                 if (nextClaimAmount < 1) nextClaimAmount = 1;
-                console.log('optimistic update', {
-                    nextClaimed,
-                    nextRcCurrent: String(nextRcCurrent),
-                    nextSteemBalance,
-                    nextClaimableByRc,
-                    nextClaimableBySteem,
-                    nextClaimAmount,
-                });
 
                 this.setState({
                     claimedAct: nextClaimed,

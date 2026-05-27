@@ -124,7 +124,6 @@ class AuthorityManagement extends React.Component {
             acc[type] = this.getSelectedAuthority(type, props);
             return acc;
         }, {});
-        console.log('[AuthorityManagement] authorities snapshot:', snapshot);
     }
 
     getSelectedAuthority(authorityType = this.state.authorityType, props = this.props) {
